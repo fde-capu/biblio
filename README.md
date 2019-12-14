@@ -1,5 +1,5 @@
-# biblio
-# ======
+# bibli
+# =====
 ## by fde-capu
 
 This program takes a file named 'list.txt'
