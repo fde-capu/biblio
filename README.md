@@ -5,21 +5,29 @@ This program takes a file named 'list.txt'
 and outputs a file named 'bibli.htm' in any
 bibliographic norm according to a template.
 
+
 The file 'list.txt' must be formatted:
+
+
 
 `// Anything.`
 
 double slash at begining of line: comment
 
 
+
 `# <p>$A. $T. <b>$R</b>, $E, $P, $Y. $O: \<$L\>. Acesso: $I. $N.`
 
-sharp at begining begining of line: template in HTML.
+sharp at begining of line: template in HTML.
+
+The space after `#` is relevant.
 
 (this is an ABNT sample in Portuguese)
 
 
+
 ...folowed by:
+
 
 
 `A` Author, Names; Separated, This Way; Surname, Then First Name
@@ -43,7 +51,9 @@ sharp at begining begining of line: template in HTML.
 `N` Article Extra Data, as ISSN etc.
 
 
+
 (...)
+
 
 
 The same above repeated for every entry.
