@@ -1,6 +1,5 @@
 # bibli
-# =====
-## by fde-capu
+### by fde-capu
 
 This program takes a file named 'list.txt'
 and outputs a file named 'bibli.htm'
@@ -8,10 +7,10 @@ in bibliographic ABNT norm.
 
 The file 'list.txt' must be formatted:
 
-// Anything.
+`// Anything.`
 double slash at begining of line: comment
 
-**\# <p>$A. $T. <b>$R</b>, $E, $P, $Y. $O: \<$L\>. Acesso: $I. $N.**
+`# <p>$A. $T. <b>$R</b>, $E, $P, $Y. $O: \<$L\>. Acesso: $I. $N.`
 sharp at begining begining of line:
 template in HTML
 (take this as an ABNT sample)
