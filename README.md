@@ -2,45 +2,45 @@
 ### by fde-capu
 
 This program takes a file named 'list.txt'
-and outputs a file named 'bibli.htm'
-in bibliographic ABNT norm.
+and outputs a file named 'bibli.htm' in any
+bibliographic norm according to a template.
 
 The file 'list.txt' must be formatted:
 
 `// Anything.`
+
 double slash at begining of line: comment
+
 
 `# <p>$A. $T. <b>$R</b>, $E, $P, $Y. $O: \<$L\>. Acesso: $I. $N.`
 
-sharp at begining begining of line:
+sharp at begining begining of line: template in HTML.
 
+(this is an ABNT sample in Portuguese)
 
-template in HTML
-
-
-(take this as an ABNT sample)
 
 ...folowed by:
 
-**A** Author, Names; Separated, This Way; Surname, Then First Name
 
-**T** Title Of The Article
+`A` Author, Names; Separated, This Way; Surname, Then First Name
 
-**R** (Revista) Periodic Name
+`T` Title Of The Article
 
-**E** Editors
+`R` (Revista) Periodic Name
 
-**P** Position of Article in Periodic
+`E` Editors
 
-**Y** Periodic Publishing Year or Date
+`P` Position of Article in Periodic
 
-**O** 1 is case it is online
+`Y` Periodic Publishing Year or Date
 
-**L** Link
+`O` 1 is case it is online
 
-**I** Date of Link Visit
+`L` Link
 
-**N** Article Extra Data, as ISSN etc.
+`I` Date of Link Visit
+
+`N` Article Extra Data, as ISSN etc.
 
 
 (...)
@@ -48,9 +48,9 @@ template in HTML
 
 The same above repeated for every entry.
 
-All entries must start with "**A**".
+All entries must start with "`A`".
 
-The sequence "**TREPYOLIN**" is not relevant.
+The sequence "`TREPYOLIN`" is not relevant.
 
 It is ok to skip lines.
 
