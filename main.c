@@ -6,7 +6,7 @@
 /*     ::|||| <::||||>                         */
 /*                                             */
 /* C20191213095912 ::||||                      */
-/* U20191213221831 ::|::|                      */
+/* U20191215165255 :||:||                      */
 /*                                             */
 /* ******************************************* */
 
@@ -208,12 +208,14 @@ char	*format_a(char *i)
 	int		n;
 	char	*w;
 	char	*et;
-	char	etal[] = " et al";
+	char	etal[] = "; et al";
 	char	upper[] = "<span style='text-transform:uppercase'>";
 	char	normal[] = "</span>";
 	char	*u;
 	char	*l;
+	int		c;
 
+	c = 0;
 	u = &upper[0];
 	l = &normal[0];
 	et = etal;
@@ -229,8 +231,6 @@ char	*format_a(char *i)
 	}
 	p = i;
 	w = put_str(u, w);
-	if (n < 4)
-	{
 		while (*p)
 		{
 			if (*p == ',')
@@ -241,23 +241,17 @@ char	*format_a(char *i)
 			{
 				w = put_str(l, w);
 				w = put_str(u, w);
+				c++;
 			}
 			*w = *p;
+			if ((n >= 4) && (c == 2))
+			{
+				w = put_str(l, w);
+				w = put_str(et, w);	
+			}
 			w++;
 			p++;
 		}
-	}
-	else
-	{
-		while (*p != ',')
-		{
-			*w = *p;
-			w++;
-			p++;
-		}
-		w = put_str(l, w);
-		w = put_str(et, w);
-	}
 	w = put_str(l, w);
 	*w = 0;
 	return (o);
