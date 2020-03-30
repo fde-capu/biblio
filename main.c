@@ -155,8 +155,8 @@ int		length(char *c)
 
 char	*put_str(char *in, char *m)
 {
-	if (!in) return (m);
-	while (*in)
+	if ((!in) || (!m)) return (m);
+	while ((in) && (*in))
 	{
 		*m = *in;
 		in++;
@@ -219,7 +219,7 @@ char	*format_a(char *i)
 	u = &upper[0];
 	l = &normal[0];
 	et = etal;
-	o = malloc(length(i) * 2);
+	o = malloc(length(i) * 10);
 	w = o;
 	p = i;
 	n = 1;
